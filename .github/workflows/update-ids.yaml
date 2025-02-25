@@ -13,9 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-
       - name: Check for skip condition
         id: skip_check
         run: |
@@ -26,7 +23,7 @@ jobs:
 
       - name: Run update ids script
         run: |
-          python ./.github/update-ids.py
+          ./.github/update_ids.sh
 
       - name: Commit changes
         run: |
