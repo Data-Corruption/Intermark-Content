@@ -23,6 +23,7 @@ jobs:
 
       - name: Run update ids script
         run: |
+          chmod +x .github/update_ids.sh
           ./.github/update_ids.sh
 
       - name: Commit changes
